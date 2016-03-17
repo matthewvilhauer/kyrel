@@ -19,7 +19,7 @@ var row, colors, kyrel, return_value, rando;
     'g' => green
 */
 
-var initial_state = [ '.', '.', '.', '.', '.' ];
+var initial_state = ['b', 'b', 'b', 'b', 'b'];
 
 function main(n) {
 
@@ -29,6 +29,15 @@ function main(n) {
   ////                          ////
   //////////////////////////////////
 
+useBlue();
+n = 2;
+for(var i = 0; i < 5; i++) {
+
+    for(var j = 0; j < n; j++) {
+        moveRight();
+    }
+    erase();
+}
 
 
   //////////////////////////////////
@@ -148,7 +157,7 @@ function onGreen() {
 }
 
 $(document).ready(function() {
-  rando = parseInt(Math.random()*10)
+  rando = parseInt(Math.random()*10);
   console.log("Our random number for this run is "+rando);
 
   //attach listeners
@@ -158,4 +167,3 @@ $(document).ready(function() {
   initializeRow();
   updateRow();
 });
-
